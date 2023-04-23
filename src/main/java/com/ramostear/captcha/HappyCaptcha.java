@@ -5,9 +5,9 @@ import com.ramostear.captcha.core.AnimCaptcha;
 import com.ramostear.captcha.core.Captcha;
 import com.ramostear.captcha.support.CaptchaStyle;
 import com.ramostear.captcha.support.CaptchaType;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.awt.*;
 import java.io.IOException;
 

@@ -3,7 +3,6 @@ package com.ramostear.captcha;
 import com.ramostear.captcha.common.ConstArray;
 import com.ramostear.captcha.common.Fonts;
 import com.ramostear.captcha.support.CaptchaType;
-import sun.misc.BASE64Encoder;
 
 import java.awt.*;
 import java.awt.geom.CubicCurve2D;
@@ -11,6 +10,7 @@ import java.awt.geom.QuadCurve2D;
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 import java.security.SecureRandom;
+import java.util.Base64;
 
 /**
  * @author : ramostear/树下魅狐
@@ -180,7 +180,7 @@ public abstract class AbstractCaptcha {
     public String toBase64(String type){
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         render(outputStream);
-        return type + new BASE64Encoder().encode(outputStream.toByteArray());
+        return type + Base64.getEncoder().encode(outputStream.toByteArray());
     }
 
     /**
